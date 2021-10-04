@@ -276,6 +276,7 @@ EOF
 fi
 
 cat >> "$home_dir/deploy_cloud_foundry.sh" << EOF
+  -v system_domain=${system_domain}  \\
   -o ~/example_manifests/use-external-blobstore.yml \\
   -v app_package_directory_key=cc-packages \\
   -v buildpack_directory_key=cc-buildpacks \\
@@ -292,9 +293,7 @@ if [ "$environment" = "AzureStack" ]; then
   -v blobstore_storage_dns_suffix=${endpoint_suffix} \\
 EOF
 fi
-cat >> "$home_dir/deploy_cloud_foundry.sh" << EOF
-  -v system_domain=${system_domain}
-EOF
+
 chmod 777 $home_dir/deploy_cloud_foundry.sh
 
 cat > "$home_dir/login_cloud_foundry.sh" << EOF
