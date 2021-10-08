@@ -276,8 +276,8 @@ EOF
 fi
 
 cat >> "$home_dir/deploy_cloud_foundry.sh" << EOF
-  -v system_domain=${system_domain}  \\
   -o ~/example_manifests/use-external-blobstore.yml \\
+  -v system_domain=${system_domain} \\
   -v app_package_directory_key=cc-packages \\
   -v buildpack_directory_key=cc-buildpacks \\
   -v droplet_directory_key=cc-droplets \\

@@ -29,7 +29,7 @@
     },
     "storageAccountKind": {
       "type": "string",
-      "defaultValue": "v2",
+      "defaultValue": "v1",
       "allowedValues": [
         "v1",
         "v2"
@@ -54,6 +54,7 @@
     },
     "environment": {
       "type": "string",
+      "defaultValue": "AzureCloud",
       "allowedValues": [
         "AzureCloud",
         "AzureChinaCloud",

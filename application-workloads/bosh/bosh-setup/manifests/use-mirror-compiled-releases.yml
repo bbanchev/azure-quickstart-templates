@@ -9,13 +9,13 @@
   value: e2f71ddff679a63949299233cf11d1124b31d7ac
 - type: replace
   path: /releases/name=capi/url
-  value: https://cloudfoundry.blob.core.chinacloudapi.cn/bosh-setup/cf-deployment-compiled-releases/capi-1.71.0-ubuntu-xenial-170.3-20181101-191602-444353114.tgz
+  value: https://storage.googleapis.com/cf-deployment-compiled-releases/capi-1.87.0-ubuntu-xenial-456.30-20191010-001009-666787794.tgz
 - type: replace
   path: /releases/name=capi/version
-  value: 1.71.0
+  value: 1.87.0
 - type: replace
   path: /releases/name=capi/sha1
-  value: 44c7fe70d9618911996af87396e48b2da9e363f8
+  value: 579cf3c0151f7883278ecbe64bfd3baa67170fde
 - type: replace
   path: /releases/name=binary-buildpack/url
   value: https://cloudfoundry.blob.core.chinacloudapi.cn/bosh-setup/cf-deployment-compiled-releases/binary-buildpack-1.0.27-ubuntu-xenial-170.3-20181101-190941-403489256.tgz

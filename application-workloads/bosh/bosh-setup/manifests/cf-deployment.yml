@@ -232,8 +232,7 @@ instance_groups:
 - name: nats
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   networks:
@@ -250,8 +249,7 @@ instance_groups:
 - name: adapter
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   networks:
@@ -340,8 +338,7 @@ instance_groups:
   - name: diego-bbs
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: small
   stemcell: default
   update:
@@ -444,8 +441,7 @@ instance_groups:
 - name: uaa
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   networks:
@@ -652,8 +648,7 @@ instance_groups:
 - name: api
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: small
   vm_extensions:
   - 50GB_ephemeral_disk
@@ -728,24 +723,6 @@ instance_groups:
             protocol: udp
         install_buildpacks:
         ## Order is important here
-        - name: staticfile_buildpack
-          package: staticfile-buildpack-cflinuxfs2
-        - name: java_buildpack
-          package: java-buildpack-cflinuxfs2
-        - name: ruby_buildpack
-          package: ruby-buildpack-cflinuxfs2
-        - name: dotnet_core_buildpack
-          package: dotnet-core-buildpack-cflinuxfs2
-        - name: nodejs_buildpack
-          package: nodejs-buildpack-cflinuxfs2
-        - name: go_buildpack
-          package: go-buildpack-cflinuxfs2
-        - name: python_buildpack
-          package: python-buildpack-cflinuxfs2
-        - name: php_buildpack
-          package: php-buildpack-cflinuxfs2
-        - name: binary_buildpack
-          package: binary-buildpack-cflinuxfs2
         - name: staticfile_buildpack
           package: staticfile-buildpack-cflinuxfs3
         - name: java_buildpack
@@ -919,8 +896,7 @@ instance_groups:
 - name: cc-worker
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   networks:
@@ -957,8 +933,7 @@ instance_groups:
 - name: router
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   vm_extensions:
   - cf-router-network-properties
@@ -1001,8 +976,7 @@ instance_groups:
 - name: tcp-router
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   vm_extensions:
@@ -1022,8 +996,7 @@ instance_groups:
 - name: scheduler
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   migrated_from:
   - {name: cc-bridge}
   - {name: cc-clock}
@@ -1168,8 +1141,7 @@ instance_groups:
 - name: doppler
   azs:
   - z1
-  - z2
-  instances: 4
+  instances: 1
   vm_type: minimal
   stemcell: default
   networks:
@@ -1332,8 +1304,7 @@ instance_groups:
 - name: diego-cell
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: small-highmem
   vm_extensions:
   - 100GB_ephemeral_disk
@@ -1458,8 +1429,7 @@ instance_groups:
 - name: log-api
   azs:
   - z1
-  - z2
-  instances: 2
+  instances: 1
   vm_type: minimal
   stemcell: default
   update:
@@ -1548,8 +1518,8 @@ instance_groups:
           - log-stream.((system_domain))
           - "*.log-stream.((system_domain))"
 - name: credhub
-  azs: [z1, z2]
-  instances: 2
+  azs: [z1]
+  instances: 1
   networks:
   - name: default
   stemcell: default
@@ -2053,9 +2023,9 @@ releases:
   version: 0.13.0
   sha1: 4b6ebfdaa467c04855528172b099e565d679e0f5
 - name: capi
-  url: https://bosh.io/d/github.com/cloudfoundry/capi-release?v=1.71.0
-  version: 1.71.0
-  sha1: cae78eb73e32e4b86eeda994a3de88ac9414f346
+  url: https://bosh.io/d/github.com/cloudfoundry/capi-release?v=1.87.0
+  version: 1.87.0
+  sha1: 03ac801323cd23205dde357cc7d2dc9e92bc0c93
 - name: cf-mysql
   url: https://bosh.io/d/github.com/cloudfoundry/cf-mysql-release?v=36.15.0
   version: 36.15.0
